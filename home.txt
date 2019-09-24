@@ -1,0 +1,23 @@
+	    <div class="header">
+        <div class="innerhd">
+            <div class="logo_cont">
+            <h1><img src="slike/redditlogo.png" height="50px" width="auto"></h1>
+            </div>
+            
+            <ul class="nav">
+                <form method="post" actiom="home.php" class="forma">
+					<a><li><div class="srcbar">
+							<input type="text">
+						</div></li></a>
+					<a><li><div class="dropdown">
+                <a><li><button type="submit"><i class="fas fa-fire-alt"></i></button></li></a>
+				<a><li><button type="submit"><i class="fas fa-globe-europe"></i></button></li></a>
+			<a><li><button type="submit"><i class="fas fa-comments"></i></button></li></a>
+			<a><li><button type="submit"><i class="fas fa-envelope"></i></button></li></a>
+			<a><li><button type="submit"><i class="fas fa-file"></i></button></li></a> 
+					
+  			<button class="dropbtn">Dropdown</button>
+  			<div class="dropdown-content">
+  			<a href="#">Link 1</a>
+  			<a href="#">Link 2</a>
+  			<a href="#">Link 3</a>
