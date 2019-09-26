@@ -7,7 +7,7 @@ body {
 }
 .nav-bar {
   height: 70px;
-  background: #262626;
+  background: white;
 }
  
 .brand {
@@ -23,7 +23,7 @@ body {
 }
 .brand a,
 .brand a:visited {
-  color: #ffffff;
+  color: black;
   text-decoration: none;
 }
  
@@ -49,14 +49,14 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
-  color: #ffffff;
+  background: white;
+  color: black;
   text-decoration: none;
 }
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: #2ab1ce;
-  color: #ffffff;
+  background: #803A10;
+  color: black;
 }
 nav ul li a:not(:only-child):after,
 nav ul li a:visited:not(:only-child):after {
@@ -82,7 +82,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #262626;
+  background: white;
   height: 70px;
   width: 70px;
 }
@@ -176,6 +176,7 @@ article {
 	vertical-align: middle;
 	border: thick black 5px;
 	border-radius: 18px;
+	color: black;
 }
 
 .search {
@@ -190,6 +191,8 @@ article {
 }
 
 .post {
+	float: inherit;
 	margin-top: 3%;
 	width: 60%;
+	text-align: center;
 }

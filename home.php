@@ -25,7 +25,7 @@
         </li>
         
         <li>
-          <a href="">Home</a>
+          <a href="#">Home</a>
 	    <ul class="nav-dropdown">
             <li>
               <a href="#">Popular</a>
@@ -36,9 +36,7 @@
             <li>
               <a href="#">Original content</a>
             </li>
-			<li>
-              <a href="#">Top subreddits</a>
-            </li>
+			
           </ul>
 		<li>
           <a href="#">Log-in</a>
