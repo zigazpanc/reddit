@@ -2,23 +2,33 @@
 session_start();
 include_once './connect.php';
 $db = mysqli_connect('localhost', 'root', '', 'reddit');
-$username = $_POST['username'];
-$pass = $_POST['pass'];
-//preverim, če sem prejel podatke
-if (!empty($username) && !empty($pass)) {
-    //$pass = sha1($pass.$salt);
-    
-    $query = "SELECT * FROM users WHERE nickname=?";
-    $stmt = $db->prepare($query);
-    $stmt->execute([$username]);
-    
-    if ($stmt->rowCount() == 1) {
-        $username = $stmt->fetch();
-        if (password_verify($pass, $username['pass'])) {
-            $_SESSION['user_id'] = $user['id'];               
-            header("Location: index.php");
-            die();
-        }
+$errors = array(); 
+
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $password = md5($_POST['pass']);
+    $user_id = 0;
+	$role = '';
+    $stmt = $db->prepare("SELECT id, nickname, password, role FROM users WHERE nickname=? AND password=? LIMIT 1");
+    $stmt->bind_param('ss', $username, $password);
+    $stmt->execute();
+    $stmt->bind_result($user_id, $username, $password, $role);
+    $stmt->store_result();
+    if($stmt->num_rows == 1)  //To check if the row exists
+        {
+            if($stmt->fetch()) //fetching the contents of the row
+            {
+               if ($role == 'admin') {
+                   header('Location: homea.php');
+               } else {
+                   $_SESSION['Logged'] = 1;
+                   $_SESSION['user_id'] = $user_id;
+                   $_SESSION['username'] = $username;
+                   header('Location: home.php');
+               }
+           }
+
     }
+    $stmt->close();
 }
-header("Location: home.php");
+?>

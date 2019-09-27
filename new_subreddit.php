@@ -43,13 +43,13 @@
           <a href="#">User</a>
           <ul class="nav-dropdown">
             <li>
-              <a href="#">My profile</a>
+              <a href="user.php">My profile</a>
             </li>
             <li>
-              <a href="#">User settings</a>
+              <a href="user_settings.php">User settings</a>
             </li>
 			   <li>
-              <a href="#">Log out</a>
+              <a href="logout.php">Log out</a>
             </li>
           </ul>
         </li>

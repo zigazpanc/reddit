@@ -21,7 +21,9 @@ $errors = array();
   		$rezultat = mysqli_query($db, $preverjanje);
   		$user = mysqli_fetch_assoc($rezultat);
   
-
+		if (preg_match('/[A-Za-z0-9]+/', $_POST['username']) == 0) {
+    die ('Username is not valid!');
+}else {
 
     	if ($user['mail'] === $email) {
       		array_push($errors, "Email is already in use");
@@ -39,7 +41,7 @@ $errors = array();
 
  
      	$INSERT = "INSERT INTO users (ime, priimek, nickname, email, password) 
-  			  VALUES('$firstn','$lastn', '$username', '$email', '$passwrd')";;
+  			  VALUES(?, ?, ?, ?, ?)";;
      //Prepare stavek
  		  if (count($errors) == 0) {
   			$stmt = $db->prepare($INSERT);
@@ -52,6 +54,7 @@ $errors = array();
 			 $stmt->close();  
 			  
 		  }
+	}
 	}
 		?>
 
