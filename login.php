@@ -1,4 +1,4 @@
-<?php include('regis.php') ?>
+<?php include('login_check.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +62,7 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type="submit" name="login">
 							Sign In
 						</button>
 					</div>

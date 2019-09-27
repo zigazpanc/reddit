@@ -191,8 +191,10 @@ article {
 }
 
 .post {
-	float: inherit;
+	text-align: right;
+	float: right;
 	margin-top: 3%;
 	width: 60%;
 	text-align: center;
+	background-color: white;
 }

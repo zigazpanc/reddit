@@ -49,27 +49,15 @@
             </li>
           </ul>
 		  </li>
-		<li>
-          <a href="#">User</a>
-          <ul class="nav-dropdown">
-            <li>
-              <a href="user.php">My profile</a>
-            </li>
-            <li>
-              <a href="user_settings.php">User settings</a>
-            </li>
-			   <li>
-              <a href="#">Log out</a>
-            </li>
-          </ul>
-        </li>
+
     </nav>
   </div>
 </section>
  			
 	  <div class="posts">
-	  		<p class="post">Toje prvi post</p>
-		  	<p class="post">To je drugi</p>
+		  <div class="post"><p class="post">Toje prvi post</p>
+		  	<p class="post">To je drugi</p></div>
+	  		
 	  </div>
 	  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

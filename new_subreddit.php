@@ -38,25 +38,15 @@
             </li>
 			</ul> 
 		</li>
-			<li>
-          <a href="#">New</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="new_post.php">Post</a>
-            </li>
-            <li>
-              <a href="new_subreddit.php">Subreddit</a>
-            </li>
-          </ul>
-		  </li>
+			
 		<li>
           <a href="#">User</a>
           <ul class="nav-dropdown">
             <li>
-              <a href="user.php">My profile</a>
+              <a href="#">My profile</a>
             </li>
             <li>
-              <a href="user_settings.php">User settings</a>
+              <a href="#">User settings</a>
             </li>
 			   <li>
               <a href="#">Log out</a>
