@@ -13,7 +13,7 @@ $errors = array();
 		$lastn = $_POST['surname'];
 		$email = $_POST['email'];
 
-		if ($password_1 != $password_2) {
+		if ($password != $password2) {
 		array_push($errors, "Passwords do not match");
   		}
     
@@ -21,11 +21,9 @@ $errors = array();
   		$rezultat = mysqli_query($db, $preverjanje);
   		$user = mysqli_fetch_assoc($rezultat);
   
-		if (preg_match('/[A-Za-z0-9]+/', $_POST['username']) == 0) {
-    die ('Username is not valid!');
-}else {
+		
 
-    	if ($user['mail'] === $email) {
+    	if ($user['email'] === $email) {
       		array_push($errors, "Email is already in use");
     	}
 
@@ -35,27 +33,29 @@ $errors = array();
     
   
   
-      if ($user['mail'] === $email) {
+      if ($user['nickname'] === $username) {
         	array_push($errors, "Email is already in use");
       }
 
  
      	$INSERT = "INSERT INTO users (ime, priimek, nickname, email, password) 
-  			  VALUES(?, ?, ?, ?, ?)";;
+  			  VALUES(?, ?, ?, ?, ?)";
      //Prepare stavek
  		  if (count($errors) == 0) {
   			$stmt = $db->prepare($INSERT);
-			$stmt->bind_param("s", $firstn, $lastn, $username, $email, $password);
-      		$stmt->execute();
+			$crypted = password_hash($password, PASSWORD_DEFAULT);
+      		$stmt->execute([$firstn,$lastn,$username,$email,$crypted]);
       		echo "Registration sucessful";
 			$_SESSION['username'] = $username;
   			$_SESSION['success'] = "Prijava je bila uspešna";
   			header('location: login.php');
 			 $stmt->close();  
 			  
+		  }else {
+			  echo('');
 		  }
 	}
-	}
+	
 		?>
 
 
