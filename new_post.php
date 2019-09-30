@@ -59,29 +59,18 @@
 </section>
  			
 	      <div class="dodajanje">
-        <form action="dodajanje.php" method="post" class="dodaj">
-  
-
-       <div>Uporabnik: <?php echo $_SESSION['usern'];?> 
-            
-        <div class="dodajanje">Post name:&nbsp;<input type="text" class="dodajanje_input" name="ime">
+	  	<form name="newsub" action="new_subreddit.php" method="post">
+		  	<div class="dodajanj">Post name:&nbsp;<input type="text" class="dodajanje_input" name="ime">
 			<p>
   		</div>  
-            
-        <div class="dodajanje">Post:&nbsp;
-        <textarea name="besedilo" rows="15">Write description here..</textarea><br>   
-        <button type="submit" name="dodajbesedilo" class="btn">Dodaj</button>  
-            <p><br>
-  		<a href="home.php">Back</a>
-                
-  	</p>
-            <div class="error">
-  			<?php foreach ($errors as $error) : ?>
-  	 		 <p><?php echo $error ?></p>
-  			<?php endforeach ?>
-  			</div>
-        </div>
-        </form>
+			<div class="dodajanj">Description: &nbsp; <input type="text" class="dodajanje_input" name="opis">
+		</div>
+			<div class="dodajanj">
+			<button type="submit" class="dodaj" name="addsub">&nbsp;&nbsp;&nbsp;Add&nbsp;&nbsp;&nbsp;</button>
+			</div>
+				</form>
+	  </div>
+	  
 	  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script  src="function.js"></script>

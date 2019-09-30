@@ -44,7 +44,8 @@ $errors = array();
  		  if (count($errors) == 0) {
   			$stmt = $db->prepare($INSERT);
 			$crypted = password_hash($password, PASSWORD_DEFAULT);
-      		$stmt->execute([$firstn,$lastn,$username,$email,$crypted]);
+			$stmt -> bind_param('sssss', $firstn, $lastn, $username, $email, $crypted);  
+      		$stmt->execute();
       		echo "Registration sucessful";
 			$_SESSION['username'] = $username;
   			$_SESSION['success'] = "Prijava je bila uspešna";
