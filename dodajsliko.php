@@ -6,6 +6,7 @@
 </head>
 
 <body>
+	<?php include('header.php') ?>
 	<div class="dodajanje">
 	<form action="addphoto.php" method="post" enctype="multipart/form-data">
     Select image to upload:

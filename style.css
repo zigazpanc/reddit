@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #677BB0;
 }
 * {
 	font-family: 'Righteous', cursive;
@@ -226,4 +227,20 @@ article {
 .dodaj:visited:hover {
   background: #803A10;
   color: black;
+}
+
+.dodajanj {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.dodajanj a{
+	color: gray;
+	text-decoration: underline;
+	font-size: 10px;
+	
+}
+
+.dodajanj textarea{
+	width: 30%;
 }
