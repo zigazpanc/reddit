@@ -1,4 +1,5 @@
 <!doctype html>
+<?php include('user_info.php'); ?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -11,53 +12,29 @@
 
 <body>
 	 
-  <section class="nav-bar">
-  <div class="nav-container">
-    <div class="brand">
-      <a href="home.php"><img src="slike/redditlogo.png"></a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list">
-       
-        <li>
-			<a href=""><button class="search"><img src="slike/src.png" id="srcb"></button><input type="text"></a>
-        </li>
-        
-        <li>
-          <a href="#">Home</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="#">Popular</a>
-            </li>
-            <li>
-              <a href="#">All</a>
-            </li>
-            <li>
-              <a href="#">Original content</a>
-            </li>
-			</ul> 
-		</li>
-			<li>
-          <a href="#">New</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="new_post.php">Post</a>
-            </li>
-            <li>
-              <a href="new_subreddit.php">Subreddit</a>
-            </li>
-          </ul>
-		  </li>
-
-    </nav>
-  </div>
-</section>
+  <?php include('header.php'); ?>
  			
-	  <div class="posts">
-		  <div class="post"><p class="post">Toje prvi post</p>
-		  	<p class="post">To je drugi</p></div>
-	  		
+	  <div class="dodajanje">
+	  	<form name="userinfo" action="user_update.php" method="post">
+			
+			<div class="profilka"><img src="<?php echo($profile) ?>"></div>
+			<div class="dodajanj">Upload new profile picture:&nbsp;<input type="file" name="profilepic"></div>
+		  	<div class="dodajanj">First name:&nbsp;<input type="text" value="<?php echo($name); ?>" name="ime" required> 
+		</div>  
+		 
+			<div class="dodajanj">Lastname: &nbsp;<input type="text" value="<?php echo($lastname); ?>" name="lastname" required> 
+		</div>
+		    <div class="dodajanj">Username: &nbsp;<input type="text" value="<?php echo($username); ?>" name="username" required> 
+		</div>
+		  	<div class="dodajanj">Email: &nbsp; <input type="text" value="<?php echo($email); ?>" name="email" required> 
+		</div>
+		  	<div class="dodajanj">Role: &nbsp; <input type="text" value="<?php echo($role); ?>" name="role" required> 
+		</div>
+		  	
+			<div class="dodajanj">
+			<button type="submit" class="dodaj" name="addsub">&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;</button>
+			</div>
+				</form>
 	  </div>
 	  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

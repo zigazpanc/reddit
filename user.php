@@ -1,4 +1,5 @@
 <!doctype html>
+<?php include('user_info.php'); ?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -11,52 +12,27 @@
 
 <body>
 	 
-  <section class="nav-bar">
-  <div class="nav-container">
-    <div class="brand">
-      <a href="home.php"><img src="slike/redditlogo.png"></a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list">
-       
-        <li>
-			<a href=""><button class="search"><img src="slike/src.png" id="srcb"></button><input type="text"></a>
-        </li>
-        
-        <li>
-          <a href="#">Home</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="#">Popular</a>
-            </li>
-            <li>
-              <a href="#">All</a>
-            </li>
-            <li>
-              <a href="#">Original content</a>
-            </li>
-			</ul> 
-		</li>
-			<li>
-          <a href="#">New</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="new_post.php">Post</a>
-            </li>
-            <li>
-              <a href="new_subreddit.php">Subreddit</a>
-            </li>
-          </ul>
-		  </li>
-
-    </nav>
-  </div>
-</section>
+  <?php include('header.php'); ?>
  			
-	  <div class="posts">
-	  		<p class="post">Toje prvi post</p>
-		  	<p class="post">To je drugi</p>
+	  <div class="dodajanje">
+			
+			<div class="profilka"><img src="<?php echo($profile) ?>"></div>
+		  	<div class="dodajanj">First name:&nbsp; <?php echo($name); ?>
+		</div>  
+		 
+			<div class="dodajanj">Lastname: &nbsp; <?php echo($lastname); ?>
+		</div>
+		    <div class="dodajanj">Username: &nbsp; <?php echo($username); ?>
+		</div>
+		  	<div class="dodajanj">Email: &nbsp; <?php echo($email); ?>
+		</div>
+		  	<div class="dodajanj">Role: &nbsp; <?php echo($role); ?>
+		</div>
+		  	
+			<div class="dodajanj">
+				<a href="user_settings.php"><button class="dodaj" >&nbsp;&nbsp;&nbsp;Change settings&nbsp;&nbsp;&nbsp;</button></a>
+			</div>
+				
 	  </div>
 	  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
