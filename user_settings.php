@@ -15,10 +15,10 @@
   <?php include('header.php'); ?>
  			
 	  <div class="dodajanje">
-	  	<form name="userinfo" action="user_update.php" method="post">
+	  	<form name="userinfo" action="user_update.php" method="post" enctype="multipart/form-data">
 			
 			<div class="profilka"><img src="<?php echo($profile) ?>"></div>
-			<div class="dodajanj">Upload new profile picture:&nbsp;<input type="file" name="profilepic"></div>
+			<div class="dodajanj">Upload new profile picture:&nbsp;<input type="file" name="fileToUpload"></div>
 		  	<div class="dodajanj">First name:&nbsp;<input type="text" value="<?php echo($name); ?>" name="ime" required> 
 		</div>  
 		 
@@ -28,11 +28,12 @@
 		</div>
 		  	<div class="dodajanj">Email: &nbsp; <input type="text" value="<?php echo($email); ?>" name="email" required> 
 		</div>
-		  	<div class="dodajanj">Role: &nbsp; <input type="text" value="<?php echo($role); ?>" name="role" required> 
-		</div>
+		  	
+			<div class="dodajanj"><a href="changepass.php"><button class="dodaj">Change password</button></a></div>
 		  	
 			<div class="dodajanj">
-			<button type="submit" class="dodaj" name="addsub">&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;</button>
+			<button type="submit" class="dodaj" name="updateuser">&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;</button>
+				
 			</div>
 				</form>
 	  </div>

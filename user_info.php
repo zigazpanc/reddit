@@ -18,4 +18,6 @@ $stmt->bind_result($name, $lastname, $username, $email, $role, $profile);
 $stmt->store_result();
 $stmt -> fetch();
 $stmt -> close();
+$_SESSION['email'] = $email;
+$_SESSION['username'] = $username;
 ?>
