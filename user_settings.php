@@ -29,7 +29,7 @@
 		  	<div class="dodajanj">Email: &nbsp; <input type="text" value="<?php echo($email); ?>" name="email" required> 
 		</div>
 		  	
-			<div class="dodajanj"><a href="changepass.php"><button class="dodaj">Change password</button></a></div>
+			<div class="dodajanj"><a href="changepassword.php">Change password</a></div>
 		  	
 			<div class="dodajanj">
 			<button type="submit" class="dodaj" name="updateuser">&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;</button>

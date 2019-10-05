@@ -11,47 +11,9 @@
 
 <body>
 	 
-  <section class="nav-bar">
-  <div class="nav-container">
-    <div class="brand">
-      <a href="home.php"><img src="slike/redditlogo.png"></a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list">
-       
-        <li>
-			<a href=""><button class="search"><img src="slike/src.png" id="srcb"></button><input type="text"></a>
-        </li>
-        
-        <li>
-          <a href="#">Home</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="#">Popular</a>
-            </li>
-            <li>
-              <a href="#">All</a>
-            </li>
-            <li>
-              <a href="#">Original content</a>
-            </li>
-			
-          </ul>
-		<li>
-          <a href="#">Log-in</a>
-          <ul class="nav-dropdown">
-            <li>
-              <a href="#">Login</a>
-            </li>
-            <li>
-              <a href="#">SIgn up</a>
-            </li>
-          </ul>
-        </li>
-    </nav>
-  </div>
-</section>
+  <?php 
+		include('frontheader.php');
+	?>
  			
 	  <div class="posts">
 	  		<p class="post">Toje prvi post</p>

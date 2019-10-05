@@ -24,30 +24,16 @@
               <a href="og.php">Trending</a>
             </li>
 			</ul> 
-		</li>
-		<li>
-          <a href="#">New</a>
-	    <ul class="nav-dropdown">
-            <li>
-              <a href="new_post.php">Post</a>
-            </li>
-            <li>
-              <a href="new_subreddit.php">Subreddit</a>
-            </li>
-			</ul> 
 		</li>	
 		<li>
-          <a href="#">User</a>
+          <a href="#">lOG IN</a>
           <ul class="nav-dropdown">
             <li>
-              <a href="user.php">My profile</a>
+              <a href="login.php">Log in</a>
             </li>
             <li>
-              <a href="user_settings.php">User settings</a>
-            </li>
-			   <li>
-              <a href="logout.php">Log out</a>
-            </li>
+              <a href="registration.php">Register now</a>
+           
           </ul>
         </li>
     </nav>
