@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('za_post_delete.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +16,7 @@
 	
   <div class="posts-wrapper">
    <?php foreach ($posts as $post): ?>
+	  <form action="deletepost.php" method="post">
    	<div class="post">
       <a class="naslov"><?php echo $post['ime']; ?></a>&nbsp;<b class="subredit"><?php echo($post['kategorija']); ?></b>
 		<br>
@@ -32,9 +33,9 @@
       	  <?php endif ?>
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="likes"><?php echo getLikes($post['id']); ?></span>
-      	
-      	&nbsp;&nbsp;<a class="komenti" href="komentarji.php?id=<?php echo($post['id']) ?>">COMMENTS</a>&nbsp;&nbsp;
-		  COMMENTS
+      	<input type="hidden" value="<?php echo $post['id'];?>" name="id"> 
+      	&nbsp;&nbsp;<button type="submit" class="button" name="deletajpost">DELETE</button>&nbsp;&nbsp;
+		  
 
 	    <!-- if user dislikes post, style button differently -->
       	<i 
@@ -45,11 +46,11 @@
       	  <?php endif ?>
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
-		  COMMENTS
+		  
       </div>
    	</div>
+		  </form>
    <?php endforeach ?>
   </div>
-  <script src="scripts.js"></script>
 </body>
 </html>

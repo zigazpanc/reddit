@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('display_za_poste.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@
       	<span class="likes"><?php echo getLikes($post['id']); ?></span>
       	
       	&nbsp;&nbsp;<a class="komenti" href="komentarji.php?id=<?php echo($post['id']) ?>">COMMENTS</a>&nbsp;&nbsp;
-		  COMMENTS
+		  
 
 	    <!-- if user dislikes post, style button differently -->
       	<i 
@@ -45,7 +45,7 @@
       	  <?php endif ?>
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
-		  COMMENTS
+		  
       </div>
    	</div>
    <?php endforeach ?>

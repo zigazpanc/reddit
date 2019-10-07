@@ -10,7 +10,7 @@
 	 
  <?php include('header.php'); ?>
  			
-	  <?php include('post.php'); ?>
+	  <?php include('koment.php'); ?>
 	  
 
 	</body>

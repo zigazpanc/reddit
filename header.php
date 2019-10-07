@@ -8,17 +8,17 @@
       <ul class="nav-list">
        
         <li>
-			<a ><button class="search"><img src="imgs/src.png" id="srcb"></button><input type="text"></a>
+			
         </li>
         
         <li>
           <a href="#">Home</a>
 	    <ul class="nav-dropdown">
             <li>
-              <a href="popular.php">Subreddits</a>
+              <a href="display_subreddits.php">Subreddits</a>
             </li>
             <li>
-              <a href="all.php">All</a>
+              <a href="home.php">All</a>
             </li>
             <li>
               <a href="og.php">Trending</a>
@@ -40,10 +40,10 @@
           <a href="#">User</a>
           <ul class="nav-dropdown">
             <li>
-              <a href="user.php">My profile</a>
+              <a href="post_delete.php">My profile</a>
             </li>
             <li>
-              <a href="user_settings.php">User settings</a>
+              <a href="user.php">User settings</a>
             </li>
 			   <li>
               <a href="logout.php">Log out</a>

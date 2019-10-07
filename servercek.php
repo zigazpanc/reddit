@@ -1,10 +1,13 @@
 <?php 
+$id = $_GET['id'];
+
 // connect to database
 $conn = mysqli_connect('localhost', 'root', '', 'reddit');
 
 // lets assume a user is logged in with id $user_id
-
+session_start();
 $user_id = $_SESSION['user_id'];
+$_SESSION['ajdiposta'] = $id;
 
 if (!$conn) {
   die("Error connecting to database: " . mysqli_connect_error($conn));
@@ -113,7 +116,7 @@ function userDisliked($post_id)
   }
 }
 
-$sql = "SELECT p.id, p.ime, p.post, s.slika, k.kategorija FROM posts p INNER JOIN slike s ON p.slika_id = s.id INNER JOIN kategorije k ON p.kategorija_id = k.id  ";
+$sql = "SELECT p.id, p.ime, p.post, s.slika, k.kategorija FROM posts p INNER JOIN slike s ON p.slika_id = s.id INNER JOIN kategorije k ON p.kategorija_id = k.id WHERE p.id= '$id'";
 $result = mysqli_query($conn, $sql);
 // fetch all posts from database
 // return them as an associative array called $posts

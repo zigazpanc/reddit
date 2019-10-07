@@ -1,19 +1,5 @@
-<?php include('server.php'); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Like and Dislike system</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	 <script type="text/javascript" src="script.js"></script>
-	 <script type="text/javascript" src="function.js"></script>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<?php  include('header.php');?>
-	
+<?php include('servercek.php');
+		include('dsplaycomments.php');?>
   <div class="posts-wrapper">
    <?php foreach ($posts as $post): ?>
    	<div class="post">
@@ -33,8 +19,7 @@
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="likes"><?php echo getLikes($post['id']); ?></span>
       	
-      	&nbsp;&nbsp;<a class="komenti" href="komentarji.php?id=<?php echo($post['id']) ?>">COMMENTS</a>&nbsp;&nbsp;
-		  COMMENTS
+      	&nbsp;&nbsp;&nbsp;&nbsp;
 
 	    <!-- if user dislikes post, style button differently -->
       	<i 
@@ -45,11 +30,25 @@
       	  <?php endif ?>
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
-		  COMMENTS
       </div>
+		 <?php endforeach ?>
+	  <?php foreach ($comments as $comment): ?>
+	  <div class="comment">
+	  	<a class="user"><?php echo $comment['nickname']?></a><br>
+		  <a class="naslovc"><?php echo $comment['ime']?></a><br>
+		  <a class="commnt"><?php echo $comment['komentar']?></a><br>
+		  <a class="date"><?php echo $comment['datum']?></a><br>
+	  </div>
+	  <?php endforeach ?>
+	  
+	  <div class="newcomment.php">
+		  <form action="addcomment.php" method="post">
+		  	<a>New comment: &nbsp; <input type="text" name="ime"</a><br>
+		  	<a>Text: &nbsp;<br> <textarea name="komentar" rows="7" maxlength="330">Write your comment here...</textarea></a><br>
+				<button type="submit" class="button" name="addcoment">Add</button>
+		  </form>
+	  	
+	  </div>
    	</div>
-   <?php endforeach ?>
+  
   </div>
-  <script src="scripts.js"></script>
-</body>
-</html>

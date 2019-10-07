@@ -1,19 +1,4 @@
-<?php include('server.php'); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Like and Dislike system</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	 <script type="text/javascript" src="script.js"></script>
-	 <script type="text/javascript" src="function.js"></script>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<?php  include('header.php');?>
-	
+<?php include('server.php') ?>
   <div class="posts-wrapper">
    <?php foreach ($posts as $post): ?>
    	<div class="post">
@@ -34,7 +19,6 @@
       	<span class="likes"><?php echo getLikes($post['id']); ?></span>
       	
       	&nbsp;&nbsp;<a class="komenti" href="komentarji.php?id=<?php echo($post['id']) ?>">COMMENTS</a>&nbsp;&nbsp;
-		  COMMENTS
 
 	    <!-- if user dislikes post, style button differently -->
       	<i 
@@ -45,11 +29,7 @@
       	  <?php endif ?>
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
-		  COMMENTS
       </div>
    	</div>
    <?php endforeach ?>
   </div>
-  <script src="scripts.js"></script>
-</body>
-</html>
