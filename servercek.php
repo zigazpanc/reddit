@@ -2,7 +2,8 @@
 $id = $_GET['id'];
 
 // connect to database
-$conn = mysqli_connect('localhost', 'root', '', 'reddit');
+include("connect.php");
+$conn = $db;
 
 // lets assume a user is logged in with id $user_id
 session_start();

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once './connect.php';
-$db = mysqli_connect('localhost', 'root', '', 'reddit');
+include("connect.php");
+
 $errors = array(); 
 
 
