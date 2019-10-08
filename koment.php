@@ -44,7 +44,7 @@
 	  <div class="newcomment.php">
 		  <form action="addcomment.php" method="post">
 		  	<a>New comment: &nbsp; <input type="text" name="ime"</a><br>
-		  	<a>Text: &nbsp;<br> <textarea name="komentar" rows="7" maxlength="330">Write your comment here...</textarea></a><br>
+		  	<a>Text: &nbsp;<br> <textarea name="komentar" rows="7" maxlength="330" placeholder="Write your comment here..."></textarea></a><br>
 				<button type="submit" class="button" name="addcoment">Add</button>
 		  </form>
 	  	

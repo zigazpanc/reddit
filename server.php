@@ -3,7 +3,7 @@
 $conn = mysqli_connect('localhost', 'root', '', 'reddit');
 
 // lets assume a user is logged in with id $user_id
-
+session_start();
 $user_id = $_SESSION['user_id'];
 
 if (!$conn) {

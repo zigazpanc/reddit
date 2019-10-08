@@ -4,7 +4,7 @@ session_start();
 
 include_once('connect.php');
 
-$query = "SELECT `ime` FROM `kategorije`";
+$query = "SELECT `kategorija` FROM `kategorije`";
 
 $result1 = mysqli_query($db, $query);
 $options = "";
@@ -95,7 +95,7 @@ if ($uploadOk == 0) {
 				$category = $_POST['kategorija'];
 				$text = $_POST['opis'];
 	
-				$query = 'SELECT id FROM kategorije WHERE ime= ?';
+				$query = 'SELECT id FROM kategorije WHERE kategorija = ?';
     			$stmt = $db->prepare($query);
 				$stmt -> bind_param('s', $category);
 				$stmt->execute();
@@ -122,7 +122,7 @@ if ($uploadOk == 0) {
 			$category = mysqli_real_escape_string($db,$_POST['kategorija']);
 			$text = $_POST['opis'];
 	
-			$query1 = 'SELECT id FROM `kategorije` WHERE ime = ?';
+			$query1 = 'SELECT id FROM `kategorije` WHERE kategorija = ?';
 			$stmt1 = $db->prepare($query1);
 			$stmt1 -> bind_param('s', $category);
 			$stmt1->execute();

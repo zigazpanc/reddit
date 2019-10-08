@@ -130,7 +130,7 @@ if ($uploadOk == 0) {
 	foreach ($errors as $error):
   	  				 echo $error ;
   					endforeach ;
-	header( "refresh:6;url=home.php" );
+	header( "refresh:3;url=user_info.php" );
 }
 
 

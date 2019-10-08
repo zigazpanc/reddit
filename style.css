@@ -256,3 +256,70 @@ article {
 	border: 2px solid black;
 	
 }
+
+.tabela{
+	border: 1px solid black;
+	border-radius: 15px;
+	width: 60%;
+	background-color: white;
+	
+	margin: 0 auto;
+	margin-top: 5%;
+	padding-top: 5%;
+	padding-bottom: 3%;
+	text-align: center;	
+}
+
+.tabela th{
+	border-bottom: 1px solid black;
+}
+
+.tabela tr{
+	padding-top: 3%;
+}
+
+.posts-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  
+}
+.post {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 5px 0px 5px;
+  border: 1px solid green;
+}
+.post-info {
+  margin: 10px auto 0px;
+  padding: 5px;
+}
+.fa {
+  font-size: 1.2em;
+}
+.fa-thumbs-down, .fa-thumbs-o-down {
+  transform:rotateY(180deg);
+}
+.logged_in_user {
+  padding: 10px 30px 0px;
+}
+i {
+  color: blue;
+}
+
+.naslov {
+	text-decoration: overline;
+	color: blue;
+	font-weight: bold;
+}
+
+.posts-wrapper img {
+	width: 90%;
+	height: auto;
+}
+
+.subredit {
+	font-size: 0.8em;
+	color: grey;
+	font-weight: 100;
+	text-decoration: underline;
+}

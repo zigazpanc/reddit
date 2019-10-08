@@ -15,7 +15,7 @@
   <?php include('header.php'); ?>
  			
 	  <div class="dodajanje">
-	  	<form name="newsub" action="new_subreddit.php" method="post">
+	  	<form name="newsub" action="addsubreddit.php" method="post">
 		  	<div class="dodajanj">Sub-reddit name:&nbsp;<input type="text" class="dodajanje_input" name="ime">
 			<p>
   		</div>  

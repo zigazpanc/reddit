@@ -11,7 +11,7 @@
  <?php include('header.php'); ?>
  			
 	  <?php include('subredditsdisplay.php'); ?>
-	<table>
+	<table class="tabela">
 	<tr>
 		<th>Subreddit</th>
 		<th>Moderator</th>

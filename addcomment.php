@@ -11,4 +11,6 @@ if(isset($_POST['addcoment'])){
 	$stmt->bind_param('iiss' , $userid, $postid, $ime, $komentar);
 	$stmt->execute();
 }
+
+header( "refresh:4;url=home.php" );
 ?>
