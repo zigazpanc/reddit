@@ -3,12 +3,12 @@
   <div class="posts-wrapper">
    <?php foreach ($posts as $post): ?>
    	<div class="post">
-      <a class="naslov"><?php echo $post['ime']; ?></a>&nbsp;<b class="subredit"><?php echo($post['kategorija']); ?></b>
+      <a class="naslov"><?php echo $post['ime']; ?></a>&nbsp;<b class="subredit"><?php echo($post['kategorija']); ?></b><br><br>
 		<br>
-		<?php	echo $post['post'];?>
+		<?php	echo $post['post'];?><br>
 		<img src="<?php 
 			 	echo($post['slika']);
-			 ?>">
+			 ?>"><br>
       <div class="post-info">
 	    <!-- if user likes post, style button differently -->
       	<i <?php if (userLiked($post['id'])): ?>

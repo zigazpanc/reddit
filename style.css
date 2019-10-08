@@ -1,10 +1,11 @@
-body {
+sbody {
 	margin: 0;
 	padding: 0;
 	background-color: #677BB0;
 }
 * {
 	font-family: 'Righteous', cursive;
+	
 }
 .nav-bar {
   height: 70px;
@@ -287,7 +288,8 @@ article {
   width: 100%;
   margin: 20px auto;
   padding: 10px 5px 0px 5px;
-  border: 1px solid green;
+  border: 1px solid black;
+	border-radius: 20px;
 }
 .post-info {
   margin: 10px auto 0px;
@@ -307,7 +309,7 @@ i {
 }
 
 .naslov {
-	text-decoration: overline;
+	
 	color: blue;
 	font-weight: bold;
 }
@@ -322,4 +324,21 @@ i {
 	color: grey;
 	font-weight: 100;
 	text-decoration: underline;
+}
+
+.newcommect {
+	margin: 2%;
+	
+}
+
+
+.comment {
+	margin: 2%;
+	border-top: solid black 1px;
+	
+}
+
+.naslov{
+	font-weight: bold;
+	font-size: 1em;
 }

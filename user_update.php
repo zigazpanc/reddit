@@ -4,6 +4,7 @@ session_start();
 include('connect.php');
 $errors = array();
 $user = $_SESSION['username'];
+$id = $_SESSION['user_id'];
 if(isset($_POST['updateuser'])){
 	$email = $_POST['email'];
 	$firstname = $_POST['ime'];
@@ -79,9 +80,10 @@ if ($uploadOk == 0) {
       }}
 		
 		if(count($errors) == 0){
-			$query = "UPDATE `users` SET `ime`= ?,`priimek`= ?,`nickname`= ?,`email`= ?,`slika`= ?";
+			$query = "UPDATE `users` SET `ime`= ?,`priimek`= ?,`nickname`= ?,`email`= ?,`slika`= ? WHERE id=?";
 			$stmt = $db->prepare($query);
-			$stmt->bind_param('sssss', $firstname, $lastname, $username, $email, $target_file);
+		
+			$stmt->bind_param('sssssi', $firstname, $lastname, $username, $email, $target_file, $id);
 			$stmt->execute();
 		}
 			
@@ -121,16 +123,16 @@ if ($uploadOk == 0) {
       }}
 		
 		if(count($errors) == 0){
-			$query = "UPDATE `users` SET `ime`= ?,`priimek`= ?,`nickname`= ?,`email`= ?";
+			$query = "UPDATE `users` SET `ime`= ?,`priimek`= ?,`nickname`= ?,`email`= ? WHERE id=?";
 			$stmt = $db->prepare($query);
-			$stmt->bind_param('ssss', $firstname, $lastname, $username, $email);
+			$stmt->bind_param('ssssi', $firstname, $lastname, $username, $email, $id);
 			$stmt->execute();
 		}
 	}
 	foreach ($errors as $error):
   	  				 echo $error ;
   					endforeach ;
-	header( "refresh:3;url=user_info.php" );
+	header( "refresh:0;url=user_info.php" );
 }
 
 

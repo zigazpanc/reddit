@@ -3,8 +3,8 @@
    <?php foreach ($posts as $post): ?>
    	<div class="post">
       <a class="naslov"><?php echo $post['ime']; ?></a>&nbsp;<b class="subredit"><?php echo($post['kategorija']); ?></b>
-		<br>
-		<?php	echo $post['post'];?>
+		<br><br>
+		<?php	echo $post['post'];?><br><br>
 		<img src="<?php 
 			 	echo($post['slika']);
 			 ?>">

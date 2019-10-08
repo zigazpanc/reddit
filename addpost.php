@@ -146,6 +146,6 @@ if ($uploadOk == 0) {
 
 		echo("prslo je do kraja ja");
 	}
-	header( "refresh:6;url=home.php" );
+	header( "refresh:0;url=home.php" );
 }
 ?>

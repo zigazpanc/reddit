@@ -38,5 +38,5 @@ if(isset($_POST['changepass'])){
 	}
 	
 
-header( "refresh:6;url=home.php" );
+header( "refresh:0;url=user.php" );
 ?>
