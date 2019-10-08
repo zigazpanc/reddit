@@ -24,6 +24,9 @@ if(isset($_POST['login'])){
         echo 'success'; // password_verify success!
                if ($role == 'admin') {
                    header('Location: home.php');
+				   $_SESSION['Logged'] = 1;
+                   $_SESSION['user_id'] = $user_id;
+                   $_SESSION['username'] = $username;
                } else {
                    $_SESSION['Logged'] = 1;
                    $_SESSION['user_id'] = $user_id;

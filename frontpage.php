@@ -15,9 +15,8 @@
 		include('frontheader.php');
 	?>
  			
-	  <div class="posts">
-	  		<p class="post">Toje prvi post</p>
-		  	<p class="post">To je drugi</p>
+	  <div class="post-wrapper">
+	  		If you want to view posts on reddit you need to log in first.
 	  </div>
 	  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
